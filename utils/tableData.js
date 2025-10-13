@@ -1,0 +1,27 @@
+// table.js
+export const tableData = [
+  { food: "Apple", calories: 95, protein: "0.5g", carbs: "25g", fat: "0.3g" },
+  { food: "Banana", calories: 105, protein: "1.3g", carbs: "27g", fat: "0.3g" },
+  { food: "Chicken Breast", calories: 165, protein: "31g", carbs: "0g", fat: "3.6g" },
+  { food: "Broccoli", calories: 55, protein: "3.7g", carbs: "11g", fat: "0.6g" },
+  { food: "Carrot", calories: 41, protein: "0.9g", carbs: "10g", fat: "0.2g" },
+  { food: "Spinach", calories: 23, protein: "2.9g", carbs: "3.6g", fat: "0.4g" },
+  { food: "Salmon", calories: 206, protein: "22g", carbs: "0g", fat: "12g" },
+  { food: "Egg", calories: 78, protein: "6g", carbs: "0.6g", fat: "5g" },
+  { food: "Almonds", calories: 164, protein: "6g", carbs: "6g", fat: "14g" },
+  { food: "Oats", calories: 150, protein: "5g", carbs: "27g", fat: "3g" },
+  { food: "Rice (white)", calories: 130, protein: "2.7g", carbs: "28g", fat: "0.3g" },
+  { food: "Rice (brown)", calories: 123, protein: "2.6g", carbs: "25.6g", fat: "1g" },
+  { food: "Quinoa", calories: 120, protein: "4.1g", carbs: "21g", fat: "1.9g" },
+  { food: "Lentils", calories: 116, protein: "9g", carbs: "20g", fat: "0.4g" },
+  { food: "Chickpeas", calories: 164, protein: "9g", carbs: "27g", fat: "2.6g" },
+  { food: "Peanut Butter", calories: 188, protein: "8g", carbs: "6g", fat: "16g" },
+  { food: "Greek Yogurt", calories: 100, protein: "10g", carbs: "6g", fat: "0g" },
+  { food: "Milk (whole)", calories: 150, protein: "8g", carbs: "12g", fat: "8g" },
+  { food: "Milk (skim)", calories: 90, protein: "8g", carbs: "12g", fat: "0g" },
+  { food: "Cheddar Cheese", calories: 113, protein: "7g", carbs: "0.4g", fat: "9g" },
+  { food: "Cottage Cheese", calories: 98, protein: "11g", carbs: "3.4g", fat: "4.3g" },
+  { food: "Tomato", calories: 22, protein: "1.1g", carbs: "4.8g", fat: "0.2g" },
+  { food: "Cucumber", calories: 16, protein: "0.7g", carbs: "3.6g", fat: "0.1g" },
+
+];

@@ -21,7 +21,7 @@ export default function InputAi({ message, setMessage, setApiResponse }) {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Chat with AI"
-            className="w-full p-3 pr-12 rounded-full border border-gray-300 focus:outline-none"
+            className="w-full p-3 pr-12 rounded-full border border-gray-700 focus:outline-none"
             onKeyDown={(e) => e.key === "Enter" && handleSend()}
           />
           <div className="absolute right-6  top-1/2 transform -translate-y-1/2">

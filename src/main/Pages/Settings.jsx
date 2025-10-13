@@ -25,9 +25,9 @@ export default function Settings() {
   ];
 
   return (
-    <main className="flex min-h-screen ">
+    <main className="flex h-150">
       {/* Sidebar */}
-      <aside className="w-64 bg-white  p-4 flex flex-col justify-between">
+      <aside className="w-64   p-4 flex flex-col justify-between">
         <div>
           <h2 className="text-xl font-bold mb-6 text-gray-700">Settings</h2>
           <nav className="space-y-1">

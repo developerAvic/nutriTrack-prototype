@@ -11,40 +11,49 @@ export default function AIChat() {
   });
 
   return (
-    <main className="p-1 flex flex-col  space-y-20 h-page justify-center max-w-xl mx-auto gap-4">
+    <>
+      <div class="grid h-150 grid-cols-3 grid-rows-6 gap-2">
+        <div class="col-span-2  row-span-5 flex items-center justify-center">
+          <main className="p-1 space-y-20 justify-center max-w-xl mx-auto gap-4">
+            <div>
+              <DisplayResponse response={combinedResponse} />
+            </div>
 
-      <div className="">
-      {/* ✅ Single DisplayResponse for all results */}
-      <DisplayResponse response={combinedResponse} />
-      </div>
+            <div className=" flex gap-1 relative w-xl  ">
+              <div className="w-.5/4">
+                <FileIp
+                  setApiResponse={(res) =>
+                    setCombinedResponse((prev) => ({
+                      ...prev,
+                      fileIp: [...prev.fileIp, res],
+                    }))
+                  }
+                />
+              </div>
+              <div className="w-4/5">
+                <InputAi
+                  message={message}
+                  setMessage={setMessage}
+                  setApiResponse={(res) =>
+                    setCombinedResponse((prev) => ({
+                      ...prev,
+                      inputAi: [...prev.inputAi, res],
+                    }))
+                  }
+                />
+              </div>
+            </div>
+          </main>
+        </div>
 
-      {/* File and Input stacked */}
-      <div className=" flex gap-1 fixed bottom-0  w-xl bg-white ">
-        <div className="w-.5/4">
-          <FileIp
-            setApiResponse={(res) =>
-              setCombinedResponse((prev) => ({
-                ...prev,
-                fileIp: [...prev.fileIp, res], // ✅ append instead of replace
-              }))
-            }
-          />
+        <div class="col-start-3 row-start-4  bg-white rounded-2xl row-span-3 bg-gray-300 flex items-center justify-center">
+          summary
         </div>
-        <div className="w-4/5">
-          <InputAi
-            message={message}
-            setMessage={setMessage}
-            setApiResponse={(res) =>
-              setCombinedResponse((prev) => ({
-                ...prev,
-                inputAi: [...prev.inputAi, res], // ✅ append instead of replace
-              }))
-            }
-          />
+        <div class="col-start-3 row-span-3 rounded-2xl bg-white bg-gray-200 flex items-center justify-center">
+          goals
         </div>
+
       </div>
-    </main>
+    </>
   );
 }
-
-

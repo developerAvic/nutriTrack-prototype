@@ -1,7 +1,10 @@
 // components/Header.jsx
 import { Bell, User } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function Header({ location }) {
+  const navigate = useNavigate();
+
   const getPageTitle = (path) => {
     switch (path) {
       case "/":
@@ -24,16 +27,17 @@ export default function Header({ location }) {
   };
 
   return (
-    <header className="flex items-center justify-between bg-white shadow px-6 py-4">
-      <h2 className="text-xl font-semibold text-gray-800">
+    <header className="flex items-center justify-between  px-6 py-4">
+      <h1 className="text-4xl font-bold text-gray-600">
         {getPageTitle(location.pathname)}
-      </h2>
+      </h1>
 
       <div className="flex items-center gap-4">
-        <button className="p-2 hover:bg-gray-100 rounded-full">
+        <button className="p-2 hover:bg-green-200 rounded-full">
           <Bell size={20} />
         </button>
-        <button className="p-2 hover:bg-gray-100 rounded-full">
+        <button onClick={() => navigate("/settings")}
+        className="p-2 hover:bg-green-200 rounded-full">
           <User size={20} />
         </button>
       </div>
