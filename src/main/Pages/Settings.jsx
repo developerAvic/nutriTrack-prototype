@@ -25,7 +25,7 @@ export default function Settings() {
   ];
 
   return (
-    <main className="flex h-150">
+    <main className="flex h-155">
       {/* Sidebar */}
       <aside className="w-64   p-4 flex flex-col justify-between">
         <div>

@@ -21,13 +21,12 @@ export default function Export() {
   };
 
   return (
-    <div class="grid h-150 grid-cols-2 grid-rows-5 gap-2 ">
-      
-      <div class="row-span-2 bg-white flex items-center justify-center">
+    <div class="grid h-155 grid-cols-2 grid-rows-5 gap-2 ">
+      <div class="row-span-2  flex items-center justify-center">
         filters and other options
       </div>
 
-      <div class="row-start-3 row-span-1 bg-white flex flex-col gap-4 items-center justify-center">
+      <div class="row-start-3 row-span-1  flex flex-col gap-4 items-center justify-center">
         <h1>Download your Activity</h1>
         <button
           onClick={downloadCSV}
@@ -38,9 +37,9 @@ export default function Export() {
       </div>
 
       <div class="row-span-4 flex flex-col gap-4 items-center justify-center">
-        <h1 className="text-2xl font-bold ">Preveiw</h1>
+        <h3 className="text-xl font-semibold mb-3 text-gray-700">Preveiw: </h3>
         <div class="row-span-4 flex items-center justify-center">
-          <div className="p-4 mt-4 h-170 w-170 overflow-auto ">
+          <div className="p-4 mt-4 h-120 w-170 overflow-auto ">
             <NutriTable data={tableData} />
           </div>
         </div>

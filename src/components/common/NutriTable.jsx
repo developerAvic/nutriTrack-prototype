@@ -10,7 +10,7 @@ const NutriTable = ({ data }) => {
   }
 
   return (
-    <table className="min-w-full rounded-lg shadow-lg overflow-hidden">
+    <table className="min-w-full rounded-lg overflow-hidden">
       <thead>
         <tr className="bg-gradient-to-r from-green-400 to-green-300 text-white">
           <th className="py-3 px-6 text-left">Food</th>

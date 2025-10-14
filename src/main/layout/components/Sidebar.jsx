@@ -16,7 +16,7 @@ const navItems = [
 export default function Sidebar() {
   return (
     <aside className="w-64 h-screen shadow fixed left-0 top-0 flex flex-col p-1">
-      <h1 className="text-5xl p-4 font-bold mb-8 text-green-600">eat'O</h1>
+      <h1 className="text-5xl p-4 font-bold mb-8 text-green-600">Eat'O</h1>
 
       <nav className="flex flex-col space-y-2">
         {navItems.map((item) => (

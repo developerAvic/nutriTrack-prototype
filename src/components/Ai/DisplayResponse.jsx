@@ -4,10 +4,10 @@ export default function DisplayResponse({ response }) {
     return null;
 
   return (
-    <div className="p-4 mt-4 h-130 overflow-auto border-t border-gray-200">
+    <div className="p-4 mt-4 h-100 overflow-auto border-t border-gray-200">
       <h2 className="text-lg font-semibold mb-3">API Response History</h2>
 
-      {/* Text Input responses */}
+
       {response.inputAi.length > 0 && (
         <div className="mb-3">
           <h3 className="font-medium text-blue-600 mb-1">Text Responses:</h3>
@@ -22,7 +22,7 @@ export default function DisplayResponse({ response }) {
         </div>
       )}
 
-      {/* File Upload responses */}
+
       {response.fileIp.length > 0 && (
         <div>
           <h3 className="font-medium text-green-600 mb-1">File Responses:</h3>
