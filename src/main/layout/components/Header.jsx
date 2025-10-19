@@ -16,7 +16,7 @@ export default function Header({ location }) {
       case "/Aichat":
         return "AI chat";
       case "/gpa":
-        return "Goal and Achievements";
+        return "GPA";
       case "/export":
         return "Export";
       case "/settings":
@@ -27,8 +27,13 @@ export default function Header({ location }) {
   };
 
   return (
-    <header className="flex items-center justify-between  px-6 py-4">
-      <h1 className="text-4xl font-bold text-gray-600">
+    <header
+      className="flex items-center justify-between px-6 py-4 fixed top-0 left-0 right-0 z-20"
+      style={{
+        marginLeft: window.innerWidth < 768 ? "4rem" : "10rem", // Adjust for sidebar width
+      }}
+    >
+      <h1 className="text-4xl left-20 font-bold text-gray-600">
         {getPageTitle(location.pathname)}
       </h1>
 
@@ -36,11 +41,14 @@ export default function Header({ location }) {
         <button className="p-2 hover:bg-green-200 rounded-full">
           <Bell size={20} />
         </button>
-        <button onClick={() => navigate("/settings")}
-        className="p-2 hover:bg-green-200 rounded-full">
+        <button
+          onClick={() => navigate("/settings")}
+          className="p-2 hover:bg-green-200 rounded-full"
+        >
           <User size={20} />
         </button>
       </div>
+
     </header>
   );
 }

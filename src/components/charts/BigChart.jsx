@@ -22,35 +22,82 @@ const data = [
 const COLORS = {
   calories: "#22c55e", // green
   protein: "#3b82f6", // blue
-  carbs: "#fbbf24",    // yellow
+  carbs: "#fbbf24", // yellow
 };
 
 export default function BigChart() {
   return (
-    <div className="w-full">
+    <div className="w-full h-[16rem] sm:h-[20rem] md:h-[24rem]">
       {/* Legend */}
-      <div className="flex gap-4 mb-2">
+      <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 mb-2 sm:mb-3">
         {Object.keys(COLORS).map((key) => (
-          <div key={key} className="flex items-center gap-1">
+          <div key={key} className="flex items-center gap-1 sm:gap-2">
             <span
-              className="w-4 h-4 rounded-sm"
+              className="w-3 h-3 sm:w-4 sm:h-4 rounded-sm"
               style={{ backgroundColor: COLORS[key] }}
             ></span>
-            <span className="text-gray-700 text-sm capitalize">{key}</span>
+            <span className="text-xs sm:text-sm text-gray-700 capitalize">
+              {key}
+            </span>
           </div>
         ))}
       </div>
 
       {/* Chart */}
-      <ResponsiveContainer width="100%" height={300}>
-        <LineChart data={data} margin={{ top: 5, right: 20, left: 0, bottom: 5 }}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="day" />
-          <YAxis />
-          <Tooltip />
-          <Line type="monotone" dataKey="calories" stroke={COLORS.calories} strokeWidth={2} />
-          <Line type="monotone" dataKey="protein" stroke={COLORS.protein} strokeWidth={2} />
-          <Line type="monotone" dataKey="carbs" stroke={COLORS.carbs} strokeWidth={2} />
+      <ResponsiveContainer width="100%" height="100%">
+        <LineChart
+          data={data}
+          margin={{ top: 10, right: 10, left: -15, bottom: 10 }}
+        >
+          <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+          <XAxis
+            dataKey="day"
+            fontSize={12}
+            tick={{ fill: "#6b7280" }}
+            interval={0}
+            angle={-45}
+            textAnchor="end"
+            height={60}
+            className="text-xs sm:text-sm"
+          />
+          <YAxis
+            fontSize={12}
+            tick={{ fill: "#6b7280" }}
+            className="text-xs sm:text-sm"
+          />
+          <Tooltip
+            contentStyle={{
+              fontSize: "12px",
+              backgroundColor: "#fff",
+              border: "1px solid #e5e7eb",
+              borderRadius: "8px",
+            }}
+            cursor={{ stroke: "#e5e7eb", strokeWidth: 1 }}
+          />
+          <Line
+            type="monotone"
+            dataKey="calories"
+            stroke={COLORS.calories}
+            strokeWidth={1.5}
+            dot={{ r: 3 }}
+            activeDot={{ r: 5 }}
+          />
+          <Line
+            type="monotone"
+            dataKey="protein"
+            stroke={COLORS.protein}
+            strokeWidth={1.5}
+            dot={{ r: 3 }}
+            activeDot={{ r: 5 }}
+          />
+          <Line
+            type="monotone"
+            dataKey="carbs"
+            stroke={COLORS.carbs}
+            strokeWidth={1.5}
+            dot={{ r: 3 }}
+            activeDot={{ r: 5 }}
+          />
         </LineChart>
       </ResponsiveContainer>
     </div>

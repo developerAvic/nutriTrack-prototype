@@ -21,27 +21,28 @@ export default function Export() {
   };
 
   return (
-    <div class="grid h-155 grid-cols-2 grid-rows-5 gap-2 ">
-      <div class="row-span-2  flex items-center justify-center">
-        filters and other options
+    <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-4 gap-4 sm:gap-6 p-3 sm:p-4 md:p-6 min-h-[calc(100vh-8rem)]">
+      {/* Filters Section */}
+      <div className="col-span-1 md:col-span-1 md:row-span-2 rounded-2xl p-3 sm:p-4 md:p-6 min-h-[12rem] sm:min-h-[15rem] flex items-center justify-center text-gray-400">
+        Filters and other options
       </div>
 
-      <div class="row-start-3 row-span-1  flex flex-col gap-4 items-center justify-center">
-        <h1>Download your Activity</h1>
+      {/* Download Section */}
+      <div className="col-span-1 md:col-start-1 md:row-start-3 md:row-span-1 rounded-2xl p-3 sm:p-4 md:p-6 min-h-[10rem] sm:min-h-[12rem] flex flex-col gap-4 items-center justify-center">
+        <h1 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-700">Download your Activity</h1>
         <button
           onClick={downloadCSV}
-          className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition"
+          className="bg-green-500 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-full hover:bg-green-600 transition text-sm sm:text-base"
         >
           Download CSV
         </button>
       </div>
 
-      <div class="row-span-4 flex flex-col gap-4 items-center justify-center">
-        <h3 className="text-xl font-semibold mb-3 text-gray-700">Preveiw: </h3>
-        <div class="row-span-4 flex items-center justify-center">
-          <div className="p-4 mt-4 h-120 w-170 overflow-auto ">
-            <NutriTable data={tableData} />
-          </div>
+      {/* Preview Section */}
+      <div className="col-span-1 md:col-span-1 md:row-span-4 rounded-2xl p-3 sm:p-4 md:p-6 min-h-[16rem] sm:min-h-[20rem] flex flex-col gap-4 items-center">
+        <h3 className="text-lg sm:text-xl font-semibold text-gray-700">Preview:</h3>
+        <div className="w-full overflow-auto">
+          <NutriTable data={tableData} />
         </div>
       </div>
     </div>

@@ -24,9 +24,7 @@ const NutriTable = ({ data }) => {
         {tableRows.map((item, index) => (
           <tr
             key={index}
-            className={`${
-              index % 2 === 0 ? "bg-green-50" : "bg-white"
-            } hover:bg-green-100 transition-colors`}
+            className={`shadow-sm hover:bg-green-100 transition-colors`}
           >
             <td className="py-2 px-6">{item.food}</td>
             <td className="py-2 px-6">{item.calories}</td>

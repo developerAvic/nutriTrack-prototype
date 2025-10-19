@@ -1,12 +1,13 @@
-// components/Layout.jsx
 import { Outlet, useLocation } from "react-router-dom";
+import { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import bg from "../../../public/image.jpg";
+import bg from "../../assets/image.jpg";
 
 export default function Layout({ children }) {
   const location = useLocation();
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(true);
 
   return (
     <div
@@ -16,17 +17,22 @@ export default function Layout({ children }) {
       }}
     >
       <div className="absolute inset-0 bg-white/20 backdrop-blur-sm z-0"></div>
-
-      <div className="fixed left-0 top-0 h-full z-10">
-        <Sidebar />
-      </div>
-
-      <div className="flex-1 ml-64 relative z-10">
-        <Header location={location} />
-        <main className="flex-1 p-6">{children || <Outlet />}</main>
-        <Footer />
+      <div className="relative min-h-screen flex w-full">
+        <Sidebar
+          collapsed={isSidebarCollapsed}
+          setIsCollapsed={setIsSidebarCollapsed}
+        />
+        <div
+          className={`flex-1 relative z-10 transition-all duration-300`}
+          style={{ marginLeft: isSidebarCollapsed ? "4rem" : "16rem" }}
+        >
+          <Header location={location} />
+          <main className="flex-1 p-6 pt-20"> {/* Added pt-20 for header height */}
+            {children || <Outlet />}
+          </main>
+          <Footer />
+        </div>
       </div>
     </div>
   );
 }
-// bg-gradient-to-br from-white via-green-100 to-green-20

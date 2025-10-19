@@ -1,0 +1,153 @@
+{
+  "user": {
+    "name": "Ashi",
+    "email": "ashi@example.com",
+    "password": "",
+    "age": "21",
+    "gender": "Male",
+    "profileImage": "profile_123base64string_or_url"
+  },
+
+  "settings": {
+    "units": "metric",
+    "theme": "light",
+    "notifications": true,
+    "isLogin": true
+  },
+
+  "images": [
+    {
+      "id": "img1",
+      "uploadedAt": "2025-10-16T08:30:00Z",
+      "fileRef": "apple_base64_or_url",
+      "name": "Apple",
+      "proportions": { "weight": 150, "calories": 95 },
+      "recognizedByAI": true
+    },
+    {
+      "id": "img2",
+      "uploadedAt": "2025-10-16T09:00:00Z",
+      "fileRef": "eggs_base64_or_url",
+      "name": "Eggs",
+      "proportions": { "weight": 100, "calories": 140 },
+      "recognizedByAI": true
+    }
+  ],
+
+  "aiChats": [
+    {
+      "id": "chat1",
+      "input": "I ate an apple and two eggs",
+      "inputType": "text",
+      "response": "Apple: 150 cal, Eggs: 140 cal. Total: 290 cal",
+      "responseType": "text",
+      "timestamp": "2025-10-16T09:05:00Z",
+      "linkedImageIds": ["img1", "img2"]
+    },
+    {
+      "id": "chat2",
+      "input": "Analyze uploaded image",
+      "inputType": "image",
+      "response": "This appears to be 2 slices of bread, 160 cal each",
+      "responseType": "text",
+      "timestamp": "2025-10-16T12:15:00Z",
+      "linkedImageIds": ["img3"]
+    }
+  ],
+
+  "nutriTable": [
+    {
+      "id": "log1",
+      "date": "2025-10-16",
+      "meal": "breakfast",
+      "food": "Apple",
+      "calories": 95,
+      "protein": 0.5,
+      "carbs": 25,
+      "fat": 0.3,
+      "source": "aiChat",
+      "imageId": "img1"
+    },
+    {
+      "id": "log2",
+      "date": "2025-10-16",
+      "meal": "breakfast",
+      "food": "Eggs",
+      "calories": 140,
+      "protein": 12,
+      "carbs": 1,
+      "fat": 10,
+      "source": "aiChat",
+      "imageId": "img2"
+    }
+  ],
+
+  "apiCache": {
+    "apple": {
+      "calories": 95,
+      "protein": 0.5,
+      "carbs": 25,
+      "fat": 0.3,
+      "cachedAt": "2025-10-16T08:30:00Z"
+    },
+    "eggs": {
+      "calories": 140,
+      "protein": 12,
+      "carbs": 1,
+      "fat": 10,
+      "cachedAt": "2025-10-16T09:00:00Z"
+    }
+  },
+
+  "metadata": {
+    "lastUpdated": "2025-10-16T12:30:00Z",
+    "lastAiChatId": "chat2",
+    "mealsLoggedToday": 2,
+    "totalCaloriesToday": 235,
+    "totalFatsToday": 85,
+    "totalCarbsToday": 135,
+    "totalProteinToday": 160
+  },
+
+  "goals": [
+    "Lose 5 kg in 3 months",
+    "Increase daily protein intake to 100g",
+    "Exercise at least 4 times a week",
+    "Lose 5 kg in 3 months",
+    "Increase daily protein intake to 100g"
+  ],
+
+  "achievements": [
+    "Lost 2 kg in first month",
+    "Completed 12 workout sessions",
+    "Maintained a healthy diet for 30 days",
+    "Lost 2 kg in first month",
+    "Completed 12 workout sessions",
+    "Maintained a healthy diet for 30 days"
+  ],
+
+  "summary": [
+    {
+      "title": "Daily Calories",
+      "content": "You consumed 2000 calories today."
+    },
+    { "title": "Protein Intake", "content": "You consumed 150g protein today." }
+  ],
+
+  "badges": [
+    {
+      "id": "1",
+      "label": "Star Badge",
+      "color": "bg-green-100",
+      "textColor": "text-green-800",
+      "icon": "FaStar"
+    },
+    {
+      "id": "2",
+      "label": "Medal Badge",
+      "color": "bg-blue-100",
+      "textColor": "text-blue-800",
+      "icon": "FaMedal"
+    }
+  ]
+}

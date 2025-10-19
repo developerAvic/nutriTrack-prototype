@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import pfp from "../../../public/pfp.png"
+import pfp from "../../assets/pfp.png"
 
 export default function GitHubProfile() {
   const [hover, setHover] = useState(false);
