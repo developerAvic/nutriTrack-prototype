@@ -16,51 +16,41 @@ export default function CalendarComp() {
   };
 
   const monthNames = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
   ];
 
   const today = new Date();
 
   return (
-    <div className="w-full flex flex-col items-center p-3 sm:p-4 md:p-6">
-      <div className="flex justify-between items-center w-full mb-3 sm:mb-4">
+    <div className="w-full flex flex-col items-center p-2">
+      <div className="flex justify-between items-center w-full mb-2">
         <button
           onClick={handlePrevMonth}
-          className="px-3 py-1 sm:px-4 sm:py-2 rounded-lg bg-green-100 text-green-700 hover:bg-green-200 text-sm sm:text-base"
+          className="px-2 py-1 rounded-lg bg-green-100 text-green-700 hover:bg-green-200"
         >
           Prev
         </button>
-        <h2 className="text-base sm:text-lg md:text-xl font-semibold text-gray-700">
+        <h2 className="text-lg font-semibold text-gray-700">
           {monthNames[selectedDate.getMonth()]} {selectedDate.getFullYear()}
         </h2>
         <button
           onClick={handleNextMonth}
-          className="px-3 py-1 sm:px-4 sm:py-2 rounded-lg bg-green-100 text-green-700 hover:bg-green-200 text-sm sm:text-base"
+          className="px-2 py-1 rounded-lg bg-green-100 text-green-700 hover:bg-green-200"
         >
           Next
         </button>
       </div>
 
-      <div className="grid grid-cols-7 gap-1 sm:gap-2 text-center text-xs sm:text-sm font-medium text-gray-500 mb-2 sm:mb-3">
+      <div className="grid grid-cols-7 gap-4 text-center text-sm font-medium text-gray-500 mb-1">
         {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((d) => (
           <div key={d}>{d}</div>
         ))}
       </div>
 
-      <div className="grid grid-cols-7 gap-1 sm:gap-2 w-full">
+      <div className="grid grid-cols-7 gap-1 w-full">
         {Array.from({ length: startOfMonth.getDay() }).map((_, i) => (
-          <div key={`empty-${i}`} className="p-2 sm:p-3"></div>
+          <div key={"empty-" + i} className="p-2"></div>
         ))}
 
         {daysInMonth.map((day) => {
@@ -73,9 +63,10 @@ export default function CalendarComp() {
             <button
               key={day}
               onClick={() => setSelectedDate(new Date(selectedDate.getFullYear(), selectedDate.getMonth(), day))}
-              className={`p-2 sm:p-3 rounded-lg hover:bg-green-100 transition-colors min-h-[2.5rem] sm:min-h-[3rem]
-                ${selectedDate.getDate() === day ? "bg-green-500 text-white" : ""}
-                ${isToday && selectedDate.getDate() !== day ? "border border-green-400" : ""}`}
+              className={`p-2 rounded-lg hover:bg-green-100 transition-colors
+                ${
+                  selectedDate.getDate() === day ? "bg-green-500 text-white" : ""
+                } ${isToday && selectedDate.getDate() !== day ? "border border-green-400" : ""}`}
             >
               {day}
             </button>
@@ -83,9 +74,11 @@ export default function CalendarComp() {
         })}
       </div>
 
-      <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-gray-600">
+      <p className="mt-2 text-sm text-gray-600">
         Selected Date:{" "}
-        <span className="font-medium text-gray-800">{selectedDate.toDateString()}</span>
+        <span className="font-medium text-gray-800">
+          {selectedDate.toDateString()}
+        </span>
       </p>
     </div>
   );

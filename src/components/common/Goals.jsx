@@ -1,15 +1,15 @@
 export function Goals({ goals, onAddGoal }) {
   return (
-    <div className=" rounded-2xl p-6 flex flex-col justify-between ">
+    <div className=" flex flex-col justify-between ">
       <div className="flex flex-col space-y-4">
         {/* Header */}
         <div className="flex items-center justify-between">
           <h3 className="text-2xl font-bold text-gray-800">Goals</h3>
           <button
             onClick={onAddGoal}
-            className="bg-green-500 text-white px-5 py-2 rounded-full shadow-md hover:bg-green-600 transition duration-300 flex items-center gap-2"
+            className="bg-green-500 text-white px-5 py-2 rounded-full hover:bg-green-600 transition duration-300 flex items-center gap-2"
           >
-            + Add Goal
+            +
           </button>
         </div>
 

@@ -13,24 +13,24 @@ const NutriTable = ({ data }) => {
     <table className="min-w-full rounded-lg overflow-hidden">
       <thead>
         <tr className="bg-gradient-to-r from-green-400 to-green-300 text-white">
-          <th className="py-3 px-6 text-left">Food</th>
-          <th className="py-3 px-6 text-left">Calories</th>
-          <th className="py-3 px-6 text-left">Protein</th>
-          <th className="py-3 px-6 text-left">Carbs</th>
-          <th className="py-3 px-6 text-left">Fat</th>
+          <th className="py-3 px-3 text-left">Food</th>
+          <th className="py-3 px-3 text-left">Calories</th>
+          <th className="py-3 px-3 text-left">Protein</th>
+          <th className="py-3 px-3 text-left">Carbs</th>
+          <th className="py-3 px-3 text-left">Fat</th>
         </tr>
       </thead>
       <tbody>
         {tableRows.map((item, index) => (
           <tr
             key={index}
-            className={`shadow-sm hover:bg-green-100 transition-colors`}
+            className={` border-t-1 border-gray-400 hover:bg-green-100 transition-colors`}
           >
-            <td className="py-2 px-6">{item.food}</td>
-            <td className="py-2 px-6">{item.calories}</td>
-            <td className="py-2 px-6">{item.protein}</td>
-            <td className="py-2 px-6">{item.carbs}</td>
-            <td className="py-2 px-6">{item.fat}</td>
+            <td className="py-2 px-3">{item.food}</td>
+            <td className="py-2 px-3">{item.calories}</td>
+            <td className="py-2 px-3">{item.protein}</td>
+            <td className="py-2 px-3">{item.carbs}</td>
+            <td className="py-2 px-3">{item.fat}</td>
           </tr>
         ))}
       </tbody>

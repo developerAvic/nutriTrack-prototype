@@ -3,10 +3,11 @@ import { PieChart, Pie, Tooltip, ResponsiveContainer, Cell } from "recharts";
 
 const data = [
   { name: "Protein", value: 25 },
-  { name: "Carbs", value: 50 },
-  { name: "Fat", value: 25 },
+  { name: "Carbs", value: 35 },
+  { name: "Fat", value: 10 },
+  { name: "Fiber", value: 30 },
 ];
-const COLORS = ["#4ade80", "#60a5fa", "#facc15"];
+const COLORS = ["#4ade80", "#60a5fa", "#facc15", "#dc2626"];
 
 export default function PieChartComp() {
   return (

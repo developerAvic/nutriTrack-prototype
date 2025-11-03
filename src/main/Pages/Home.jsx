@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { username } from "../../../utils/Nutridata";
+import { Salad } from "lucide-react";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ export default function Home() {
         </h1>
         <p className="text-gray-500 mb-6 max-w-md">
           Track your nutrition, monitor progress, and stay healthy with{" "}
-          <span className="font-bold ">Eat'O</span>🍏
+          <span className="font-bold text-green-700 flex flex-row align-center justify-center ">Eat'O <Salad/></span>
         </p>
 
         <button

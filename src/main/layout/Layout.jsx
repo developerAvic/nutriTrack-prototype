@@ -27,7 +27,7 @@ export default function Layout({ children }) {
           style={{ marginLeft: isSidebarCollapsed ? "4rem" : "16rem" }}
         >
           <Header location={location} />
-          <main className="flex-1 p-6 pt-20"> {/* Added pt-20 for header height */}
+          <main className="flex-1 pt-20"> {/* Added pt-20 for header height */}
             {children || <Outlet />}
           </main>
           <Footer />

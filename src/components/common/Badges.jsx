@@ -1,13 +1,33 @@
-import { FaStar, FaMedal } from "react-icons/fa";
+import {
+  FaCheckCircle,
+  FaTint,
+  FaDrumstickBite,
+  FaSun,
+  FaShoePrints,
+  FaLeaf,
+  FaCandyCane,
+  FaCalendarCheck,
+  FaStar,
+  FaMedal,
+} from "react-icons/fa";
 
 const iconMap = {
-  FaStar: FaStar,
-  FaMedal: FaMedal,
+  FaCheckCircle,
+  FaTint,
+  FaDrumstickBite,
+  FaSun,
+  FaShoePrints,
+  FaLeaf,
+  FaCandyCane,
+  FaCalendarCheck,
+  FaStar,
+  FaMedal,
 };
+
 
 export function Badges({ data, title = "Badges" }) {
   return (
-    <div className="rounded-2xl  p-6 w-full h-full flex flex-col">
+    <div className=" w-full h-full flex flex-col">
       <h3 className="text-2xl font-bold text-gray-800 mb-4">{title}</h3>
       <div className="flex flex-wrap gap-3">
         {data.map((badge) => {
