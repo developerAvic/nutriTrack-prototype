@@ -1,4 +1,3 @@
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./main/layout/Layout";
 import Dashboard from "./main/Pages/Dashboard";
@@ -9,10 +8,9 @@ import AIChat from "./main/Pages/AIchat";
 import Export from "./main/Pages/Export";
 import Activity from "./main/Pages/Activity";
 
-
 export default function App() {
   return (
-    <Router>
+    <Router basename="/EatO-production">
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -22,7 +20,6 @@ export default function App() {
           <Route path="/Aichat" element={<AIChat />} />
           <Route path="/export" element={<Export />} />
           <Route path="/settings" element={<Settings />} />
-          
         </Routes>
       </Layout>
     </Router>
